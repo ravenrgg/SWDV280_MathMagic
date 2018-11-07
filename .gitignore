@@ -113,3 +113,9 @@ db.sqlite3
 # weird .gitignore stuff
 ..gitignore.un~
 .gitignore~
+
+# weird settings stuff
+.settings.py.un~
+.settings_local.py.un~
+settings.py~
+settings_local.py~
