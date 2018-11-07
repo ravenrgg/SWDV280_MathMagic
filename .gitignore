@@ -53,6 +53,7 @@ coverage.sml
 # Django stuff:
 *.log
 local_settings.py
+settings_local.py
 
 # Flask stuff:
 instance/
