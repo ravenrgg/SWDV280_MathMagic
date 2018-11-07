@@ -1,0 +1,47 @@
+# Basic navigation commands
+
+cd - change directory (e.x. cd path/to/file)
+mkdir - make directory (e.x. mkdir nameofdir)
+ls - show files in current directory
+
+# Git commands
+
+git status - shows what files are being tracked/untracked,
+	     always use this before adding files so that 
+	     you can know which files to add into the commit
+
+git add <file> - this is how you track the changes you've 
+		 made
+
+git stash save "<message>" - this will save all of your changes
+			     into a 'stash' and revert your local
+			     code to it's previous state
+
+git commit -m "<message>" - this packages all the files you
+			    have changed into one group to 
+			    be pushed to GitHub together
+
+git push origin master - this is the command that will push your
+			 commit onto GitHub
+
+git pull origin master - this is how you update your code so that
+			 it matches the changes made on GitHub
+
+####
+Important Notes:
+
+1) ALWAYS check GitHub before you push code:
+	-Do this to check if anyone has pushed any code while you've been
+working.
+	-If your code is up to date with the latest push (i.e. you did a pull)
+don't worry
+	-If it is not up to date with the latest push, and the files changed
+are the same files you are editing, do this:
+		1) git stash save "<your message>"
+		2) git pull origin master
+		3) git stash list
+		4) git stash pop <stash@{x}> - whichever one is the one you
+saved
+		5) git add <files>
+		6) git commit -m "<your message>"
+		7) git push origin master
