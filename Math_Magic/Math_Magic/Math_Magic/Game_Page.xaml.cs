@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Math_Magic
 {
-	public partial class MainPage : ContentPage
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class Game_Page : ContentPage
 	{
-		public MainPage()
+		public Game_Page ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
 	}
 }
