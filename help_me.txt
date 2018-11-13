@@ -21,11 +21,15 @@ git commit -m "<message>" - this packages all the files you
 			    have changed into one group to 
 			    be pushed to GitHub together
 
-git push origin master - this is the command that will push your
+git push origin <branchname> - this is the command that will push your
 			 commit onto GitHub
 
-git pull origin master - this is how you update your code so that
+git pull origin <branchname> - this is how you update your code so that
 			 it matches the changes made on GitHub
+
+git checkout <branchname> - this command allows you to switch 
+			    between different branches (joy, 
+			    rick, alex, scott, master)
 
 ####
 Important Notes:
