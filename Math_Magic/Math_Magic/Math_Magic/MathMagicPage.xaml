@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Math_Magic.MathMagicPage"
+             Title="Math Magician">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="InputLabelBackgroundColor">#0F9D58</Color>
+            <Color x:Key="GreenButtonColor">#008000</Color>
+            <Color x:Key="BlueButtonColor">#4285F4</Color>
+            <Color x:Key="RedButtonColor">#8B0000</Color>
+
+            <Style x:Key="InputLabelStyle" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="{StaticResource InputLabelBackgroundColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="100" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="BaseButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+            <Style x:Key="SilverButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" >
+                <Setter Property="BackgroundColor" Value="Silver" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Style x:Key="BlueButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" >
+                <Setter Property="BackgroundColor" Value="{StaticResource BlueButtonColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="GreenButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" >
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenButtonColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="RedButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" >
+                <Setter Property="BackgroundColor" Value="{StaticResource RedButtonColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label  x:Name="InputLabel"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    Text="0"
+                    Style="{StaticResource InputLabelStyle}"/>
+
+            <!--First row-->
+            <Button x:Name="OneButton"
+                    Text="1"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="TwoButton"
+                    Text="2"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="ThreeButton"
+                    Text="3"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="FourButton"
+                    Text="4"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <!--Second row-->
+            <Button x:Name="FiveButton"
+                    Text="5"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="SixButton"
+                    Text="6"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="SevenButton"
+                    Text="7"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="EightButton"
+                    Text="8"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <!--Third row-->
+            <Button x:Name="NineButton"
+                    Text="9"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="TenButton"
+                    Text="10"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="ElevenButton"
+                    Text="11"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Style="{StaticResource SilverButtonStyle}"/>
+
+            <Button x:Name="TwelveButton"
+                    Text="12"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <!--Arithmetic-->
+            <Button x:Name="AdditionButton"
+                    Text="+"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="SubtractionButton"
+                    Text="-"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="MultiplyButton"
+                    Text="x"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="DivideButton"
+                    Text="÷"
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Style="{StaticResource GreenButtonStyle}"/>
+            
+            <!--Choose your time limit-->
+            <Button x:Name="OneMinuteButton"
+                    Text="1 Minute"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <Button x:Name="FiveMinutesButton"
+                    Text="5 Minutes"
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <!--Game On-->
+            <Button x:Name="StartButton"
+                    Text="Start"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="SubmitButton"
+                    Text="Submit"
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="RestartButton"
+                    Text="Restart"
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <!--Pick your number-->
+            <Button x:Name="OneButtonZ"
+                    Text="1"
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="TwoButtonZ"
+                    Text="2"
+                    Grid.Row="10"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="ThreeButtonZ"
+                    Text="3"
+                    Grid.Row="10"
+                    Grid.Column="2"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="FourButtonZ"
+                    Text="4"
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <Button x:Name="FiveButtonZ"
+                    Text="5"
+                    Grid.Row="11"
+                    Grid.Column="1"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <Button x:Name="SixButtonZ"
+                    Text="6"
+                    Grid.Row="11"
+                    Grid.Column="2"
+                    Style="{StaticResource BlueButtonStyle}"/>
+
+            <Button x:Name="SevenButtonZ"
+                    Text="7"
+                    Grid.Row="12"
+                    Grid.Column="0"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="EightButtonZ"
+                    Text="8"
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="NineButtonZ"
+                    Text="9"
+                    Grid.Row="12"
+                    Grid.Column="2"
+                    Style="{StaticResource GreenButtonStyle}"/>
+
+            <Button x:Name="ZeroButton"
+                    Text="0"
+                    Grid.Row="13"
+                    Grid.Column="2"
+                    Style="{StaticResource RedButtonStyle}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+    

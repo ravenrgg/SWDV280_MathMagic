@@ -11,7 +11,7 @@ namespace Math_Magic
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new MathMagicPage();
 		}
 
 		protected override void OnStart()
