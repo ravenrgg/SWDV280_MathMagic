@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math_Magic.iOS", "Math_Magi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math_Magic.UWP", "Math_Magic\Math_Magic.UWP\Math_Magic.UWP.csproj", "{E38EE625-3ABA-49BF-9027-512E852004BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math_Magic", "Math_Magic\Math_Magic\Math_Magic.csproj", "{B438930B-6F12-4ACD-BB10-43F17519B508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Math_Magic", "Math_Magic\Math_Magic\Math_Magic.csproj", "{B438930B-6F12-4ACD-BB10-43F17519B508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

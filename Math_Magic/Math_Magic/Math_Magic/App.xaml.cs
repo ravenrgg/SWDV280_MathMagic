@@ -7,7 +7,9 @@ namespace Math_Magic
 {
 	public partial class App : Application
 	{
-		public App()
+        public string DisplayLabelText { get; internal set; }
+
+        public App()
 		{
 			InitializeComponent();
 
