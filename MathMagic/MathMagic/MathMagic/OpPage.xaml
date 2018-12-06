@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MathMagic.OpPage">
+    <ContentPage.Content>
+        <StackLayout Padding="25">
+            <Label Text="Pick what kind of math you want to do"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView SelectionMode="Single" ItemSelected="OnItemSelected" x:Name="OpList">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Addition</x:String>
+                        <x:String>Subtraction</x:String>
+                        <x:String>Multiplication</x:String>
+                        <x:String>Division</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
